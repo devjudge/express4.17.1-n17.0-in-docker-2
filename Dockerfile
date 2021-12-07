@@ -1,4 +1,4 @@
-FROM node:dubnium-buster-slim
+FROM node:17.0-buster-slim
 
 USER root
 
