@@ -5,7 +5,17 @@ tasks:
       bash database-setup.sh 17.0.0
     init: npm install
     command: npm start
+
 ports:
   - port: 8080
-    onOpen: open-preview
+    name: "Backend Server"
+    onOpen: open-browser
+    visibility: public
+  - port: 3306
+    name: "MySQL Server"
+    onOpen: ignore
+    visibility: public
+  - port: 27017
+    name: "MongoDB Server"
+    onOpen: ignore
     visibility: public
